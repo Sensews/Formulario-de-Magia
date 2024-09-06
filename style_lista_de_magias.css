@@ -1,0 +1,146 @@
+/* Estilos gerais */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Esconde as barras de rolagem principais */
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "Fraunces", serif;
+}
+
+/* Estilos do cabeçalho com o botão de estrela */
+header {
+    position: relative;
+}
+
+.star-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    z-index: 2;
+}
+
+.star-button a {
+    color: rgba(255, 255, 255, 0.647);
+    text-decoration: none;
+}
+
+.star-button a:hover {
+    color: rgba(255, 157, 221, 0.647);
+}
+
+.fa-star {
+    font-size: 2rem;
+}
+
+/* Estilo do título */
+h1 {
+    text-align: center;
+    color: azure;
+    font-size: 230%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+h2 {
+    text-align: left;
+    color: azure;
+    font-size: 200%;
+    margin-left: 1%;
+}
+
+/* Estilos do container das magias */
+#magias-container {
+    max-height: calc(100vh - 100px); /* Ajuste a altura conforme necessário */
+    overflow-y: scroll; /* Permite rolagem vertical dentro do container */
+    padding: 10px;
+    position: relative;
+    scrollbar-width: none; /* Esconde a barra de rolagem em navegadores Firefox */
+    padding-bottom: 10%; /* Espaço adicional para rolar além do conteúdo */
+    margin-bottom: 10%;
+}
+
+#magias-container::-webkit-scrollbar {
+    display: none; /* Esconde a barra de rolagem em navegadores WebKit */
+}
+
+.magia {
+    position: relative;
+    z-index: 2;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    font-family: "Fraunces", serif;
+    margin: 0 auto;
+    font-size: 125%;
+    background-color: rgba(0, 0, 0, 0.7);
+    max-width: 50%;
+    border: 1px solid white;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Espaço adicional entre as magias */
+}
+
+/* Detalhes da magia */
+.detalhes {
+    margin-top: 10px;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.7); /* Aumentado a opacidade */
+    backdrop-filter: blur(6px); /* Adiciona um pouco de desfoque */
+    display: none; /* Inicialmente escondido */
+}
+
+/* Botões */
+button {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #000000;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: "Fraunces", serif;
+    font-style: bold;
+    font-size: 125%;
+}
+button:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+/* Estilos das estrelas */
+.stars {
+    position: absolute;
+    top: -20px;
+    color: white;
+    z-index: 1;
+    animation: animate 5s linear forwards;
+}
+
+.stars::before {
+    content: '\f005';
+    font-family: FontAwesome;
+    text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 50px #fff;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}

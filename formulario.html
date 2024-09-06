@@ -1,51 +1,157 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-<title>Formulário Simples</title>
-<style>
-    /* Estilos básicos para o formulário (opcional) */
-    body {
-    font-family: sans-serif;
-    }
-    form {
-    width: 300px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    }
-    label {
-    display: block;
-    margin-bottom: 5px;
-    }
-    input[type="text"],
-    textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    }
-    input[type="submit"] {
-    padding: 8px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    }
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PROJECT OBLIVION</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-<h2>Formulário de Contato</h2>
-<form action="processar.php" method="post">
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" required>
+<header>
+    <div class="star-button">
+        <a href="lista_de_magias.html">
+            <i class="fa fa-star"></i>
+        </a>
+    </div>
+</header>
+<main>
+    <script src="stars.js"></script>
+    <h2>CRIE SUA MAGIA</h2>
+    <div class="container">
+        <form id="form-magia">
+            <!-- Linha para Nome, Círculo e Divisão -->
+            <div class="form-row">
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
 
-    <label for="email">Email:</label>
-    <input type="text" id="email" name="email" required>
+                <div>
+                    <label for="circulo">Círculo:</label>
+                    <select id="circulo" name="circulo" required>
+                        <option value="">Selecione o Círculo</option>
+                        <option value="1°">1° Círculo</option>
+                        <option value="2°">2° Círculo</option>
+                        <option value="3°">3° Círculo</option>
+                        <option value="4°">4° Círculo</option>
+                        <option value="5°">5° Círculo</option>
+                        <option value="6°">6° Círculo</option>
+                    </select>
+                </div>
 
-    <label for="mensagem">Mensagem:</label>
-    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                <div>
+                    <label for="divisao">Divisão:</label>
+                    <select id="divisao" name="divisao" required>
+                        <option value="">Selecione a Divisão</option>
+                        <option value="Breu">Breu</option>
+                        <option value="Arcano">Arcano</option>
+                        <option value="Criação">Criação</option>
+                        <option value="Sanctum">Sanctum</option>
+                        <option value="Naturae">Naturae</option>
+                        <option value="Evolução">Evolução</option>
+                    </select>
+                </div>
+            </div>
 
-    <input type="submit" value="Enviar">
-</form>
+            <!-- Campo para Componentes da Magia -->
+            <div class="form-row">
+                <div>
+                    <label for="componentes">Componentes da Magia:</label>
+                    <input type="text" id="componentes" name="componentes" required>
+                </div>
+            </div>
+
+            <!-- Linha para Execução, Alcance e Duração -->
+            <div class="form-row">
+                <div>
+                    <label for="execucao">Execução:</label>
+                    <select id="execucao" name="execucao" required>
+                        <option value="">Selecione a Execução</option>
+                        <option value="Ação Livre">Ação Livre</option>
+                        <option value="Ação Bônus">Ação Bônus</option>
+                        <option value="Ação de Reação">Ação de Reação</option>
+                        <option value="Ação de Movimento">Ação de Movimento</option>
+                        <option value="Ação Padrão">Ação Padrão</option>
+                        <option value="Ação Completa">Ação Completa</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="alcance">Alcance:</label>
+                    <select id="alcance" name="alcance" required>
+                        <option value="">Selecione o Alcance</option>
+                        <option value="Pessoal">Pessoal</option>
+                        <option value="Toque">Toque</option>
+                        <option value="Curto">Curto</option>
+                        <option value="Médio">Médio</option>
+                        <option value="Longo">Longo</option>
+                        <option value="Extremo">Extremo</option>
+                        <option value="Ilimitado">Ilimitado</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="duracao">Duração:</label>
+                    <select id="duracao" name="duracao" required>
+                        <option value="">Selecione a Duração</option>
+                        <option value="Instantânea">Instantânea</option>
+                        <option value="Cena">Cena</option>
+                        <option value="Sustentada">Sustentada</option>
+                        <option value="Sustendada durante a Cena">Sustendada durante a Cena</option>
+                        <option value="Definida">Definida</option>
+                        <option value="Descarregar">Descarregar</option>
+                        <option value="Especial">Especial</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Descrição -->
+            <label for="descricao">Descrição do Efeito:</label>
+            <textarea id="descricao" name="descricao" rows="4" placeholder="Digite a descrição aqui..." required></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    <div id="info-container" class="infos">
+        <div id="info-circulo"></div>
+        <div id="info-divisao"></div>
+        <div id="info-alcance"></div>
+        <div id="info-execucao"></div>
+        <div id="info-duracao"></div>
+    </div>
+    <div id="response-message"></div> <!-- Container para mensagens de resposta -->
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('form-magia').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            var formData = new FormData(this);
+
+            fetch('processar.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                var messageContainer = document.getElementById('response-message');
+                if (data.status === 'success') {
+                    messageContainer.innerHTML = '<p>' + data.message + '</p>';
+                    this.reset(); // Limpa o formulário
+                } else {
+                    messageContainer.innerHTML = '<p>' + data.message + '</p>';
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                document.getElementById('response-message').innerHTML = '<p>Erro ao processar o formulário.</p>';
+            });
+        });
+    </script>
+</main>
 </body>
 </html>

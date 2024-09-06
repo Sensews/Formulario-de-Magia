@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISTA DE MAGIAS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_lista_de_magias.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="stars.js" defer></script>
+    <script>
+        function mostrarDetalhes(id) {
+            var detalhes = document.getElementById('detalhes-' + id);
+            if (detalhes.style.display === 'none') {
+                detalhes.style.display = 'block';
+            } else {
+                detalhes.style.display = 'none';
+            }
+        }
+
+        function carregarMagias() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'consultar.php', true);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    document.getElementById('magias-container').innerHTML = xhr.responseText;
+                } else {
+                    console.error('Erro ao carregar as magias:', xhr.statusText);
+                }
+            };
+            xhr.send();
+        }
+
+        // Carregar as magias quando a página for carregada
+        window.onload = function() {
+            carregarMagias();
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <div class="star-button">
+            <a href="formulario.html">
+                <i class="fa fa-star"></i>
+            </a>
+        </div>
+    </header>
+    <h1>LISTA DE MAGIAS</h1>
+    <div id="magias-container"></div>
+</body>
+</html>
