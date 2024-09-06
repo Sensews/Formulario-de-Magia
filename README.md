@@ -107,11 +107,11 @@ O formulário possui validações tanto no frontend quanto no backend. O usuári
 
 Adicione aqui screenshots do formulário e da interface de listagem de magias:
 
-- ![Tela do Formulário](#)
+**Tela de Formulário:**
 <img src="/print_criar_magias.png" />
-- ![Tela de Visualização das Magias](#)
+
+**Tela de Listas de Magias:**
 <img src="/print_lista_de_magias.png" />
----
 
 ## Autor
 
