@@ -115,4 +115,4 @@ Adicione aqui screenshots do formulário e da interface de listagem de magias:
 
 ## Autor
 
-Desenvolvido por **[Seu Nome]**, estudante de Cibersegurança na **PUCPR**. Este projeto faz parte de um hobby relacionado ao desenvolvimento de sistemas próprios de RPG.
+Desenvolvido por **[João Pedro Moreira da Fonseca]**, estudante de Cibersegurança na **PUCPR**. Este projeto faz parte de um hobby relacionado ao desenvolvimento de sistemas próprios de RPG.
