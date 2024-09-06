@@ -103,19 +103,14 @@ Uma vez cadastradas, as magias podem ser listadas em uma página separada, onde 
 ### 3. Validação e Feedback
 O formulário possui validações tanto no frontend quanto no backend. O usuário é notificado caso tente enviar o formulário com informações incompletas ou inválidas.
 
-## Futuras Implementações
-
-- **Edição e Exclusão de Magias**: Permitirá que o usuário edite e exclua magias cadastradas.
-- **Filtro de busca**: Adição de um sistema de busca e filtro para facilitar a localização de magias específicas.
-- **Autenticação de usuários**: Implementação de um sistema de login para permitir que apenas usuários autorizados possam cadastrar ou visualizar magias.
-
 ## Screenshots
 
 Adicione aqui screenshots do formulário e da interface de listagem de magias:
 
 - ![Tela do Formulário](#)
+<img src="/print_criar_magias.png" />
 - ![Tela de Visualização das Magias](#)
-
+<img src="/print_lista_de_magias.png" />
 ---
 
 ## Autor
